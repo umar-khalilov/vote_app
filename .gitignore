@@ -1,3 +1,7 @@
+#Dev dependencies
 **/node_modules/
+**/sequelize-meta.json
+
+#IDE dependencies
 /.idea
 /.vscode
