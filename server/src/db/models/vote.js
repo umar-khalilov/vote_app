@@ -1,7 +1,5 @@
 'use strict';
-const {
-    Model,
-} = require('sequelize');
+const { Model } = require('sequelize');
 const { isAfter } = require('date-fns');
 
 module.exports = (sequelize, DataTypes) => {

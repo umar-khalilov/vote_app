@@ -2,13 +2,13 @@
   "name": "server",
   "version": "1.0.0",
   "description": "My Vote application",
-  "private": "true",
+  "private": true,
   "scripts": {
     "start-dev": "nodemon src/server.js",
     "start": "node src/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Umar Khalilov",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
