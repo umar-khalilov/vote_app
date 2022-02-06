@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         }, date: {
             type: DataTypes.DATEONLY, allowNull: false, validate: {
                 notNull: true, notEmpty: true, isDate: true, isCorrectDate(value) {
-                    if (isAfter(new Date(), new Date(value))) {
+                    if (isAfter(new Date(value), new Date())) {
                         throw new Error('Enter a valid date');
                     }
                 },

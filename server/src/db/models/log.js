@@ -6,10 +6,10 @@ module.exports = (sequelize, DataTypes) => {
     class Log extends Model {
         static associate(models) {
             Log.hasOne(models.Vote, {
-                foreignKey: 'id',
+                foreignKey: 'voteId',
             });
             Log.belongsTo(models.Vote, {
-                foreignKey: 'id',
+                foreignKey: 'logId',
             });
         }
     }
@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         }, date: {
             type: DataTypes.DATEONLY, allowNull: false, validate: {
                 notNull: true, notEmpty: true, isDate: true, isCorrectDate(value) {
-                    if (isAfter(new Date(), new Date(value))) {
+                    if (isAfter(new Date(value), new Date())) {
                         throw new Error('Enter a valid date');
                     }
                 },

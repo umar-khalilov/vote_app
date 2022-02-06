@@ -4,6 +4,10 @@ module.exports = {
         await queryInterface.createTable('logs', {
             id: {
                 primaryKey: true, allowNull: false, autoIncrement: true, type: Sequelize.INTEGER,
+            }, voteId: {
+                type: Sequelize.INTEGER, allowNull: false, field: 'vote_id', references: {
+                    model: 'votes', key: 'id',
+                },
             }, url: {
                 allowNull: false, type: Sequelize.STRING(300),
             }, json: {
