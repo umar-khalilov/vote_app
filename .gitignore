@@ -1,6 +1,6 @@
 #Dev dependencies
 **/node_modules/
-**/sequelize-meta.json
+**/sequelize*.json
 
 #IDE dependencies
 /.idea
