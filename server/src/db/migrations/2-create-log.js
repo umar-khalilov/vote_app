@@ -7,7 +7,7 @@ module.exports = {
             }, voteId: {
                 type: Sequelize.INTEGER, allowNull: false, field: 'vote_id', references: {
                     model: 'votes', key: 'id',
-                },
+                }, onDelete: 'CASCADE', onUpdate: 'RESTRICT',
             }, url: {
                 allowNull: false, type: Sequelize.STRING(300),
             }, json: {

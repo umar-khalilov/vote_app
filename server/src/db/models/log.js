@@ -8,9 +8,6 @@ module.exports = (sequelize, DataTypes) => {
             Log.hasOne(models.Vote, {
                 foreignKey: 'voteId',
             });
-            Log.belongsTo(models.Vote, {
-                foreignKey: 'logId',
-            });
         }
     }
 

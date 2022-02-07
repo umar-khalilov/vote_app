@@ -1,0 +1,7 @@
+POST http://localhost:3001/api/votes
+Content-Type: application/json
+
+{
+  "number": "2",
+  "date": "2020-10-10"
+}

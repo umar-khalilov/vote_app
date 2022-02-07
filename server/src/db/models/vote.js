@@ -5,9 +5,6 @@ const { isAfter } = require('date-fns');
 module.exports = (sequelize, DataTypes) => {
     class Vote extends Model {
         static associate(models) {
-            Vote.hasOne(models.Log, {
-                foreignKey: 'id',
-            });
             Vote.belongsTo(models.Log, {
                 foreignKey: 'id',
             });
